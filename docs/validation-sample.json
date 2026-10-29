@@ -1,0 +1,213 @@
+{
+  "status": "completed",
+  "profiles": [
+    {
+      "repository": "wtsxdev/reverse-engineering",
+      "commit": "b25498551c6d7110685896078afeb27097aa1e24",
+      "license": "",
+      "scope": {
+        "files_analyzed": 2,
+        "static_only": true,
+        "execution": "No donor code, install scripts, or tests executed.",
+        "parser": "Python AST; heuristic JavaScript/TypeScript/Rust symbol and import detection.",
+        "skipped_files": 3,
+        "archive_sha256": "46ac1c6c2d5fdd63ef9cc601004daf6887e0b1e7b6eefe8cc9c349b14095ba01"
+      },
+      "records_collected": 18,
+      "modules_detected": 0
+    },
+    {
+      "repository": "sickpyramid/ReaFuse",
+      "commit": "c64502a2827832c042d894ba90dc678a95772cb1",
+      "license": "MIT",
+      "scope": {
+        "files_analyzed": 75,
+        "static_only": true,
+        "execution": "No donor code, install scripts, or tests executed.",
+        "parser": "Python AST; heuristic JavaScript/TypeScript/Rust symbol and import detection.",
+        "skipped_files": 14,
+        "archive_sha256": "4788ba6d387d4de18cc8de84f7bede162755603ad81646aaef6e76d18b1c992c"
+      },
+      "records_collected": 372,
+      "modules_detected": 39
+    },
+    {
+      "repository": "glauberlima/open-scrantic",
+      "commit": "274ad3e8bfd3fbc054fd0b32f78f08420f326dcf",
+      "license": "MIT",
+      "scope": {
+        "files_analyzed": 38,
+        "static_only": true,
+        "execution": "No donor code, install scripts, or tests executed.",
+        "parser": "Python AST; heuristic JavaScript/TypeScript/Rust symbol and import detection.",
+        "skipped_files": 19,
+        "archive_sha256": "d20977913022a14fa447cb393f32dd2e0f256c486373b2b8a86f1421cc2cc2fe"
+      },
+      "records_collected": 513,
+      "modules_detected": 21
+    }
+  ],
+  "analysis": {
+    "mode": "Deterministic evidence matching; behavior unverified",
+    "matrix": [
+      {
+        "id": "R1",
+        "requirement": "Profile repository source",
+        "status": "candidate-source",
+        "evidence_ids": [
+          "ev-0ff0fda8d09c75487f036b60",
+          "ev-e05e7dbeb1063558d2a9dca0",
+          "ev-fe733838dfcbd29e9be9f5f7",
+          "ev-01aca463ebbc753c6e3266ef",
+          "ev-4559842046e7c728ed984547"
+        ],
+        "reason": "Lexical overlap suggests places to investigate; implementation and behavior are not verified.",
+        "acceptance": {
+          "given": "A fresh project with representative test data",
+          "when": "Profile repository source",
+          "then": "Define the exact expected observable result before building.",
+          "edge_cases": [
+            "Empty input",
+            "Invalid input",
+            "Persistence after restart"
+          ],
+          "status": "needs-review"
+        }
+      },
+      {
+        "id": "R2",
+        "requirement": "Verify acceptance contracts",
+        "status": "candidate-source",
+        "evidence_ids": [
+          "ev-00567fc9eae31df26d5088ef",
+          "ev-708a7964e1e4b675998c3186"
+        ],
+        "reason": "Lexical overlap suggests places to investigate; implementation and behavior are not verified.",
+        "acceptance": {
+          "given": "A fresh project with representative test data",
+          "when": "Verify acceptance contracts",
+          "then": "Define the exact expected observable result before building.",
+          "edge_cases": [
+            "Empty input",
+            "Invalid input",
+            "Persistence after restart"
+          ],
+          "status": "needs-review"
+        }
+      },
+      {
+        "id": "R3",
+        "requirement": "Export evidence records",
+        "status": "candidate-source",
+        "evidence_ids": [
+          "ev-d0a7047e329f4f4ea938c754"
+        ],
+        "reason": "Lexical overlap suggests places to investigate; implementation and behavior are not verified.",
+        "acceptance": {
+          "given": "A fresh project with representative test data",
+          "when": "Export evidence records",
+          "then": "Define the exact expected observable result before building.",
+          "edge_cases": [
+            "Empty input",
+            "Invalid input",
+            "Persistence after restart"
+          ],
+          "status": "needs-review"
+        }
+      },
+      {
+        "id": "R4",
+        "requirement": "Resume investigation stages",
+        "status": "candidate-source",
+        "evidence_ids": [
+          "ev-1dde1eebe5010eda212f4283",
+          "ev-f54cb02bd8711a4e5537ff86"
+        ],
+        "reason": "Lexical overlap suggests places to investigate; implementation and behavior are not verified.",
+        "acceptance": {
+          "given": "A fresh project with representative test data",
+          "when": "Resume investigation stages",
+          "then": "Define the exact expected observable result before building.",
+          "edge_cases": [
+            "Empty input",
+            "Invalid input",
+            "Persistence after restart"
+          ],
+          "status": "needs-review"
+        }
+      }
+    ],
+    "summary": {
+      "requirements": 4,
+      "source_candidates": 4,
+      "documentation_only": 0,
+      "gaps": 0,
+      "verified_features": 0
+    },
+    "decisions": [
+      {
+        "repository": "wtsxdev/reverse-engineering",
+        "commit": "b25498551c6d7110685896078afeb27097aa1e24",
+        "approach": "Study module boundaries and contracts; independently implement selected behavior.",
+        "license": "",
+        "test_modules": 0,
+        "limitations": [
+          "Static sample only; repository tests have not been run."
+        ]
+      },
+      {
+        "repository": "sickpyramid/ReaFuse",
+        "commit": "c64502a2827832c042d894ba90dc678a95772cb1",
+        "approach": "Study module boundaries and contracts; independently implement selected behavior.",
+        "license": "MIT",
+        "test_modules": 10,
+        "limitations": [
+          "Static sample only; repository tests have not been run."
+        ]
+      },
+      {
+        "repository": "glauberlima/open-scrantic",
+        "commit": "274ad3e8bfd3fbc054fd0b32f78f08420f326dcf",
+        "approach": "Study module boundaries and contracts; independently implement selected behavior.",
+        "license": "MIT",
+        "test_modules": 0,
+        "limitations": [
+          "Static sample only; repository tests have not been run."
+        ]
+      }
+    ],
+    "next_steps": [
+      "Resolve requirement gaps with user flows or supported API documentation.",
+      "Replace draft acceptance criteria with concrete inputs and expected outputs.",
+      "Implement one requirement and run its contract before expanding scope."
+    ]
+  },
+  "events": [
+    {
+      "repository": "wtsxdev/reverse-engineering",
+      "stage": "profile",
+      "status": "completed",
+      "commit": "b25498551c6d7110685896078afeb27097aa1e24",
+      "seconds": 1.27
+    },
+    {
+      "repository": "sickpyramid/ReaFuse",
+      "stage": "profile",
+      "status": "completed",
+      "commit": "c64502a2827832c042d894ba90dc678a95772cb1",
+      "seconds": 1.79
+    },
+    {
+      "repository": "glauberlima/open-scrantic",
+      "stage": "profile",
+      "status": "completed",
+      "commit": "274ad3e8bfd3fbc054fd0b32f78f08420f326dcf",
+      "seconds": 1.51
+    }
+  ],
+  "limitations": [
+    "No donor code or donor tests were executed.",
+    "Matching declarations are leads, not verified capabilities.",
+    "Local model inference was not run."
+  ]
+}
